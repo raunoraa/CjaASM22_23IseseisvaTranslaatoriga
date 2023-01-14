@@ -47,6 +47,8 @@ clean:
 .PHONY: run
 run:
 	$(BUILD_DIR)/$(TARGET_EXEC) '>++++++++[<+++++++++>-]<.>++++[<+++++++>-]<+.+++++++..+++.>>++++++[<+++++++>-]<++.------------.>++++++[<+++++++++>-]<+.<.+++.------.--------.>>>++++[<++++++++>-]<+.' > hello.asm
+	rm -f ./hello.o
+	rm -f ./hello
 	nasm hello.asm -felf
 	gcc -m32 hello.o -o hello
 	./hello
