@@ -12,4 +12,4 @@ Kui failid on kompileeritud (NB! Kui kompileeritud faile pole, tuleb error), sii
 Uuesti kompileerimiseks võib lihtsalt kasutada taaskord käsku "make" (kirjutatakse vajalikud failid üle).
 <br>
 <br>
-Uuesti "hello.asm" faili genereerimiskes võib lihtsalt kasutada taaskord käsku "make run" (ei pea vana "hello.asm" faili ära kustutama, see kirjutatakse lihtsalt üle).
+Uuesti "hello.asm" faili genereerimiseks võib lihtsalt kasutada taaskord käsku "make run" (ei pea vana "hello.asm" faili ära kustutama, see kirjutatakse lihtsalt üle).
