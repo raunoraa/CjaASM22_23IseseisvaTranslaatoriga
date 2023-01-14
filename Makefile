@@ -42,6 +42,8 @@ $(BUILD_DIR)/%.cpp.o: %.cpp
 
 .PHONY: clean
 clean:
+	rm -f ./hello.o
+	rm -f ./hello
 	rm -r $(BUILD_DIR)
 
 .PHONY: run
