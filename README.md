@@ -13,3 +13,6 @@ Uuesti kompileerimiseks võib lihtsalt kasutada taaskord käsku "make" (kirjutat
 <br>
 <br>
 Uuesti "hello.asm" faili genereerimiseks võib lihtsalt kasutada taaskord käsku "make run" (ei pea vana "hello.asm" faili ära kustutama, see kirjutatakse lihtsalt üle).
+<br>
+<br>
+Hetkel ei ole genereeritud ASM fail veel korrektne (ei kompileeru). Tõenäoliselt on probleem tsüklites.
