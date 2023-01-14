@@ -1,6 +1,6 @@
 # Brainfucki interpretaator
 <br>
 <br>
-Kompileerimiseks sisesta terminali "make"
-Kompileeritud failide kustutamiseks "make clean"
-Kui failid on kompileeritud, siis käivitamiseks kirjutada "make run". See tekitab hello.asm faili.
+Kompileerimiseks sisesta terminali "make".<br>
+Kompileeritud failide kustutamiseks "make clean".<br>
+Kui failid on kompileeritud, siis käivitamiseks kirjutada "make run". See tekitab hello.asm faili.<br>
