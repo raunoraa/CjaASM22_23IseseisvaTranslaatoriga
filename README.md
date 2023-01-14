@@ -2,7 +2,7 @@
 <br>
 C programmid (*.h ja *.c) paiknevad "src" kaustas.
 <br>
-###Juhised
+### Juhised
 <br>
 Ava terminal (VSCode'i või Linuxi terminal) ning vaata, et hetke kaust oleks "CjaASM22_23".<br>
 Kompileerimiseks sisesta terminali "make". See tekitab "build" folderi koos kompileeritud failidega.<br>
