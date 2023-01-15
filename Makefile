@@ -19,7 +19,9 @@ DEPS := $(OBJS:.o=.d)
 # Every folder in ./src will need to be passed to GCC so that it can find header files
 INC_DIRS := $(shell find $(SRC_DIRS) -type d)
 # Add a prefix to INC_DIRS. So moduleA would become -ImoduleA. GCC understands this -I flag
-INC_FLAGS := $(addprefix -I,$(INC_DIRS))
+INC_FLAGS := $(addprefix -m32 -I,$(INC_DIRS))
+
+CXX := gcc -m32
 
 # The -MMD and -MP flags together generate Makefiles for us!
 # These files will have .d instead of .o as the output.
@@ -42,6 +44,8 @@ $(BUILD_DIR)/%.cpp.o: %.cpp
 
 .PHONY: clean
 clean:
+	rm -f ./bfi
+	rm -f ./mem.c.o
 	rm -f ./hello.o
 	rm -f ./hello
 	rm -r $(BUILD_DIR)
@@ -49,9 +53,18 @@ clean:
 .PHONY: run
 run:
 	$(BUILD_DIR)/$(TARGET_EXEC) '>++++++++[<+++++++++>-]<.>++++[<+++++++>-]<+.+++++++..+++.>>++++++[<+++++++>-]<++.------------.>++++++[<+++++++++>-]<+.<.+++.------.--------.>>>++++[<++++++++>-]<+.' > hello.asm
+	rm -f ./bfi
+	rm -f ./mem.c.o
 	rm -f ./hello.o
 	rm -f ./hello
 	nasm hello.asm -felf
+	cp ./build/src/mem.c.o ./
+	cp ./build/bfi ./
+	gcc -m32 hello.o mem.c.o -o hello -no-pie
+	clear
+	./hello
+	echo ""
+
 
 # Include the .d makefiles. The - at the front suppresses the errors of missing
 # Makefiles. Initially, all the .d files will be missing, and we don't want those
