@@ -1,4 +1,4 @@
-# Brainfucki kompilaator
+# Iseseisva translaatoriga Brainfucki kompilaator
 <br>
 Kasutab gcc ja nasm kompilaatoreid.
 <br>
