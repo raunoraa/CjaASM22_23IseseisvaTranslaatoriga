@@ -221,10 +221,9 @@ void BF_beginLoop_run(struct BF_instruction_st *instruction, int *index) {
 /* Konstruktor funktsioon BF_beginLoop_new loob uue struktuuri, mis implementeerib
    tsüklite algust.
 
-   NB! Oluline on märkida, et loopForwardIndex ei saa algväärtustatud
-   sisulise väärtusega ja seda on vaja muuta hiljem!
+   Probleem on vist hetkel siin, aga ma ei tea, kuidas seda parandada
 */
-struct BF_instruction_st *BF_beginLoop_new(void) {
+struct BF_instruction_st *BF_beginLoop_new(int loopForwardIndex) {
     struct BF_instruction_st *new = NULL;
 
     new = malloc(sizeof(struct BF_instruction_st));
@@ -233,9 +232,7 @@ struct BF_instruction_st *BF_beginLoop_new(void) {
         goto cleanup;
     }
 
-    /* Hetkel pole teada kus asub tsükli lõpp, seega kasutame väärtust, mis
-       ei saa korrektne olla.*/
-    new->loopForwardIndex = -1;
+    new->loopForwardIndex = loopForwardIndex; //Tõenäoliselt mingi viga indeksitega, aga ei tea kuidas parandada.
     new->run = BF_beginLoop_run;
     new->printAsm = BF_beginLoop_printAsm;
 
@@ -350,7 +347,7 @@ void parse(struct BF_instruction_st **inst_arr, const char *program) {
                 break;
             }
             case BF_START_LOOP:
-                inst_arr[i] = BF_beginLoop_new();
+                inst_arr[i] = BF_beginLoop_new(i); //Probleem on hetkel seotud vist sellega, aga ma ei tea, kuidas seda parandada.
                 stack_push(&loopStack, i);
                 break;
 
