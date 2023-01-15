@@ -1,1009 +1,855 @@
 global main
-
-extern mem_add
-extern mem_move
-extern mem_inc
-extern mem_dec
-extern mem_left
-extern mem_right
-extern mem_get
-extern mem_set
-extern mem_printDebug
-
 extern putchar
 
 section .text
 main:
+    ; Salvestame esi väärtuse
+    push esi
+
+    ; Paneme magasini 30000 baiti, mille väärtused kõik on 0.
+    mov ecx, 7500
+    mem_init:
+        push dword 0
+        loop mem_init
+
+    ; Viimasena lisatud väärtus on mäluala algus
+    mov esi, esp
+
+
+    ;;;;;;;;;;; Edasine on transleeritud kood!
+
     ;;;; Instruktsioon >
-    push dword 1
-    call mem_move
-
-    add esp, 4
+    inc esi
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
-    add esp, 4
+    ;;;; Instruktsioon +
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
+
+    ;;;; Instruktsioon +
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
+
+    ;;;; Instruktsioon +
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon [
 silt_9:
-    call mem_get
+    mov eax, 0
+
+    mov al, [esi + edi]
     cmp eax, 0
     je silt_22
     ;;;; Instruktsioon <
-    push dword -1
-    call mem_move
-
-    add esp, 4
+    dec esi
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
-    add esp, 4
+    ;;;; Instruktsioon +
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
+
+    ;;;; Instruktsioon +
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
+
+    ;;;; Instruktsioon +
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
+
+    ;;;; Instruktsioon +
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon >
-    push dword 1
-    call mem_move
-
-    add esp, 4
+    inc esi
 
     ;;;; Instruktsioon -
-    push dword -1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    dec al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon ]
     jmp silt_9
 silt_22:
     ;;;; Instruktsioon <
-    push dword -1
-    call mem_move
-
-    add esp, 4
+    dec esi
 
     ;;;; Instruktsioon .
-    call mem_get
+    mov eax, 0
 
+    mov al, [esi + edi]
     push eax
     call putchar
 
     add esp, 4
 
     ;;;; Instruktsioon >
-    push dword 1
-    call mem_move
-
-    add esp, 4
+    inc esi
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
-    add esp, 4
+    ;;;; Instruktsioon +
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon [
 silt_30:
-    call mem_get
+    mov eax, 0
+
+    mov al, [esi + edi]
     cmp eax, 0
     je silt_41
     ;;;; Instruktsioon <
-    push dword -1
-    call mem_move
-
-    add esp, 4
+    dec esi
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
-    add esp, 4
+    ;;;; Instruktsioon +
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
+
+    ;;;; Instruktsioon +
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
+
+    ;;;; Instruktsioon +
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon >
-    push dword 1
-    call mem_move
-
-    add esp, 4
+    inc esi
 
     ;;;; Instruktsioon -
-    push dword -1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    dec al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon ]
     jmp silt_30
 silt_41:
     ;;;; Instruktsioon <
-    push dword -1
-    call mem_move
-
-    add esp, 4
+    dec esi
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon .
-    call mem_get
+    mov eax, 0
 
+    mov al, [esi + edi]
     push eax
     call putchar
 
     add esp, 4
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
-    add esp, 4
+    ;;;; Instruktsioon +
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
+
+    ;;;; Instruktsioon +
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
+
+    ;;;; Instruktsioon +
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon .
-    call mem_get
+    mov eax, 0
 
+    mov al, [esi + edi]
     push eax
     call putchar
 
     add esp, 4
 
     ;;;; Instruktsioon .
-    call mem_get
+    mov eax, 0
 
+    mov al, [esi + edi]
     push eax
     call putchar
 
     add esp, 4
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
-    add esp, 4
+    ;;;; Instruktsioon +
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon .
-    call mem_get
+    mov eax, 0
 
+    mov al, [esi + edi]
     push eax
     call putchar
 
     add esp, 4
 
     ;;;; Instruktsioon >
-    push dword 1
-    call mem_move
-
-    add esp, 4
+    inc esi
 
     ;;;; Instruktsioon >
-    push dword 1
-    call mem_move
-
-    add esp, 4
+    inc esi
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
-    add esp, 4
+    ;;;; Instruktsioon +
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
+
+    ;;;; Instruktsioon +
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon [
 silt_66:
-    call mem_get
+    mov eax, 0
+
+    mov al, [esi + edi]
     cmp eax, 0
     je silt_77
     ;;;; Instruktsioon <
-    push dword -1
-    call mem_move
-
-    add esp, 4
+    dec esi
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
-    add esp, 4
+    ;;;; Instruktsioon +
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
+
+    ;;;; Instruktsioon +
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
+
+    ;;;; Instruktsioon +
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon >
-    push dword 1
-    call mem_move
-
-    add esp, 4
+    inc esi
 
     ;;;; Instruktsioon -
-    push dword -1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    dec al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon ]
     jmp silt_66
 silt_77:
     ;;;; Instruktsioon <
-    push dword -1
-    call mem_move
-
-    add esp, 4
+    dec esi
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon .
-    call mem_get
+    mov eax, 0
 
+    mov al, [esi + edi]
     push eax
     call putchar
 
     add esp, 4
 
     ;;;; Instruktsioon -
-    push dword -1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon -
-    push dword -1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    dec al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon -
-    push dword -1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon -
-    push dword -1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    dec al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon -
-    push dword -1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon -
-    push dword -1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    dec al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon -
-    push dword -1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon -
-    push dword -1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    dec al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon -
-    push dword -1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon -
-    push dword -1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    dec al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon -
-    push dword -1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    dec al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon -
-    push dword -1
-    call mem_add
+    mov al, [esi + edi]
+    dec al
+    mov [esi + edi], al
 
-    add esp, 4
+    ;;;; Instruktsioon -
+    mov al, [esi + edi]
+    dec al
+    mov [esi + edi], al
+
+    ;;;; Instruktsioon -
+    mov al, [esi + edi]
+    dec al
+    mov [esi + edi], al
+
+    ;;;; Instruktsioon -
+    mov al, [esi + edi]
+    dec al
+    mov [esi + edi], al
+
+    ;;;; Instruktsioon -
+    mov al, [esi + edi]
+    dec al
+    mov [esi + edi], al
+
+    ;;;; Instruktsioon -
+    mov al, [esi + edi]
+    dec al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon .
-    call mem_get
+    mov eax, 0
 
+    mov al, [esi + edi]
     push eax
     call putchar
 
     add esp, 4
 
     ;;;; Instruktsioon >
-    push dword 1
-    call mem_move
-
-    add esp, 4
+    inc esi
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
-    add esp, 4
+    ;;;; Instruktsioon +
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
+
+    ;;;; Instruktsioon +
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon [
 silt_102:
-    call mem_get
+    mov eax, 0
+
+    mov al, [esi + edi]
     cmp eax, 0
     je silt_115
     ;;;; Instruktsioon <
-    push dword -1
-    call mem_move
-
-    add esp, 4
+    dec esi
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
-    add esp, 4
+    ;;;; Instruktsioon +
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
+
+    ;;;; Instruktsioon +
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
+
+    ;;;; Instruktsioon +
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
+
+    ;;;; Instruktsioon +
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon >
-    push dword 1
-    call mem_move
-
-    add esp, 4
+    inc esi
 
     ;;;; Instruktsioon -
-    push dword -1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    dec al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon ]
     jmp silt_102
 silt_115:
     ;;;; Instruktsioon <
-    push dword -1
-    call mem_move
-
-    add esp, 4
+    dec esi
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon .
-    call mem_get
+    mov eax, 0
 
+    mov al, [esi + edi]
     push eax
     call putchar
 
     add esp, 4
 
     ;;;; Instruktsioon <
-    push dword -1
-    call mem_move
-
-    add esp, 4
+    dec esi
 
     ;;;; Instruktsioon .
-    call mem_get
+    mov eax, 0
 
+    mov al, [esi + edi]
     push eax
     call putchar
 
     add esp, 4
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
-    add esp, 4
+    ;;;; Instruktsioon +
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon .
-    call mem_get
+    mov eax, 0
 
+    mov al, [esi + edi]
     push eax
     call putchar
 
     add esp, 4
 
     ;;;; Instruktsioon -
-    push dword -1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon -
-    push dword -1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    dec al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon -
-    push dword -1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon -
-    push dword -1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    dec al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon -
-    push dword -1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    dec al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon -
-    push dword -1
-    call mem_add
+    mov al, [esi + edi]
+    dec al
+    mov [esi + edi], al
 
-    add esp, 4
+    ;;;; Instruktsioon -
+    mov al, [esi + edi]
+    dec al
+    mov [esi + edi], al
+
+    ;;;; Instruktsioon -
+    mov al, [esi + edi]
+    dec al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon .
-    call mem_get
+    mov eax, 0
 
+    mov al, [esi + edi]
     push eax
     call putchar
 
     add esp, 4
 
     ;;;; Instruktsioon -
-    push dword -1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon -
-    push dword -1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    dec al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon -
-    push dword -1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon -
-    push dword -1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    dec al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon -
-    push dword -1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon -
-    push dword -1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    dec al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon -
-    push dword -1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    dec al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon -
-    push dword -1
-    call mem_add
+    mov al, [esi + edi]
+    dec al
+    mov [esi + edi], al
 
-    add esp, 4
+    ;;;; Instruktsioon -
+    mov al, [esi + edi]
+    dec al
+    mov [esi + edi], al
+
+    ;;;; Instruktsioon -
+    mov al, [esi + edi]
+    dec al
+    mov [esi + edi], al
+
+    ;;;; Instruktsioon -
+    mov al, [esi + edi]
+    dec al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon .
-    call mem_get
+    mov eax, 0
 
+    mov al, [esi + edi]
     push eax
     call putchar
 
     add esp, 4
 
     ;;;; Instruktsioon >
-    push dword 1
-    call mem_move
-
-    add esp, 4
+    inc esi
 
     ;;;; Instruktsioon >
-    push dword 1
-    call mem_move
-
-    add esp, 4
+    inc esi
 
     ;;;; Instruktsioon >
-    push dword 1
-    call mem_move
-
-    add esp, 4
+    inc esi
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
-    add esp, 4
+    ;;;; Instruktsioon +
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon [
 silt_148:
-    call mem_get
+    mov eax, 0
+
+    mov al, [esi + edi]
     cmp eax, 0
     je silt_160
     ;;;; Instruktsioon <
-    push dword -1
-    call mem_move
-
-    add esp, 4
+    dec esi
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
-
-    ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
-    add esp, 4
+    ;;;; Instruktsioon +
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
+
+    ;;;; Instruktsioon +
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
+
+    ;;;; Instruktsioon +
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon >
-    push dword 1
-    call mem_move
-
-    add esp, 4
+    inc esi
 
     ;;;; Instruktsioon -
-    push dword -1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    dec al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon ]
     jmp silt_148
 silt_160:
     ;;;; Instruktsioon <
-    push dword -1
-    call mem_move
-
-    add esp, 4
+    dec esi
 
     ;;;; Instruktsioon +
-    push dword 1
-    call mem_add
-
-    add esp, 4
+    mov al, [esi + edi]
+    inc al
+    mov [esi + edi], al
 
     ;;;; Instruktsioon .
-    call mem_get
+    mov eax, 0
 
+    mov al, [esi + edi]
     push eax
     call putchar
 
     add esp, 4
 
+    ; Koristame virtuaalmälu.
+    add esp, 30000
+
+    ; Taastame esi väärtuse.
+    pop esi
+
     mov eax, 0
+
+    ; Lõpetame programmi
     ret
 

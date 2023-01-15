@@ -58,10 +58,7 @@ run:
 	rm -f ./hello.o
 	rm -f ./hello
 	nasm hello.asm -felf
-	cp ./build/src/mem.c.o ./
-	cp ./build/bfi ./
-	gcc -m32 hello.o mem.c.o -o hello -no-pie
-	clear
+	gcc -m32 hello.o -o hello -no-pie
 	./hello
 	@echo ""
 

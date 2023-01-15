@@ -17,13 +17,25 @@
 
 void BF_increment_printAsm(struct BF_instruction_st *instruction, int *index) {
 
-    if(instruction->increment < 0) printf("    ;;;; Instruktsioon -\n");
-    else printf("    ;;;; Instruktsioon +\n");
-    printf("    push dword %d\n", instruction->increment);
-    printf("    call mem_add\n\n");
-    printf("    add esp, 4\n\n");
+    if(instruction->increment < 0) {
+
+        printf("    ;;;; Instruktsioon -\n");
+        printf("    mov al, [esi + edi]\n");
+        printf("    dec al\n");
+        printf("    mov [esi + edi], al\n\n");
+
+        }
+    else {
+
+        printf("    ;;;; Instruktsioon +\n");
+        printf("    mov al, [esi + edi]\n");
+        printf("    inc al\n");
+        printf("    mov [esi + edi], al\n\n");
+
+    }
+
 }
-/* Funkctioon BF_increment_new on kood, mida käivitatakse konkreetse
+/* Funktsioon BF_increment_new on kood, mida käivitatakse konkreetse
    instruktsiooni käivitamisel.
 */
 void BF_increment_run(struct BF_instruction_st *instruction, int *index) {
@@ -64,12 +76,22 @@ struct BF_instruction_st *BF_increment_new(int increment) {
 }
 
 void BF_move_printAsm(struct BF_instruction_st *instruction, int *index) {
+    
+    //TODO Mäluala piiride kontroll
 
-    if(instruction->numberOfPositions < 0) printf("    ;;;; Instruktsioon <\n");
-    else printf("    ;;;; Instruktsioon >\n");
-    printf("    push dword %d\n", instruction->numberOfPositions);
-    printf("    call mem_move\n\n");
-    printf("    add esp, 4\n\n");
+    if(instruction->numberOfPositions < 0) {
+
+        printf("    ;;;; Instruktsioon <\n");
+        printf("    dec esi\n\n");
+
+        }
+    else {
+
+        printf("    ;;;; Instruktsioon >\n");
+        printf("    inc esi\n\n");
+
+        }
+
 }
 void BF_move_run(struct BF_instruction_st *instruction, int *index) {
     /* Suurendame mälu väärtust vastavalt konstruktoris seatud väärtusele! */
@@ -105,7 +127,11 @@ struct BF_instruction_st *BF_move_new(int numberOfPositions){
 
 void BF_print_printAsm(struct BF_instruction_st *instruction, int *index) {
     printf("    ;;;; Instruktsioon .\n");
-    printf("    call mem_get\n\n");
+
+    //endine mem_get
+    printf("    mov eax, 0\n\n");
+    printf("    mov al, [esi + edi]\n");
+
     printf("    push eax\n");
     printf("    call putchar\n\n");
     printf("    add esp, 4\n\n");
@@ -167,8 +193,7 @@ struct BF_instruction_st *BF_read_new(){
 }
 
 void BF_debug_printAsm(struct BF_instruction_st *instruction, int *index) {
-    printf("    ;;;; Instruktsioon #\n");
-    printf("    call mem_debug\n\n");
+    printf("    ;;;; Instruktsioon # (hetkel implementeerimata)\n");
 }
 void BF_debug_run(struct BF_instruction_st *instruction, int *index) {
 
@@ -195,7 +220,11 @@ struct BF_instruction_st *BF_debug_new(){
 void BF_beginLoop_printAsm(struct BF_instruction_st *instruction, int *index) {
     printf("    ;;;; Instruktsioon [\n");
     printf("silt_%d:\n", *index);
-    printf("    call mem_get\n");
+    
+    //endine mem_get
+    printf("    mov eax, 0\n\n");
+    printf("    mov al, [esi + edi]\n");
+
     printf("    cmp eax, 0\n");
     printf("    je silt_%d\n", instruction->loopBackIndex);
 }

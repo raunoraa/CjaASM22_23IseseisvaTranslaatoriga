@@ -142,20 +142,22 @@ void run(struct BF_instruction_st **inst_arr, int inst_arr_len) {
 void printAsm(struct BF_instruction_st **inst_arr, int inst_arr_len) {
 
     printf(
-        "global main\n\n"
-        "extern mem_add\n"
-        "extern mem_move\n"
-        "extern mem_inc\n"
-        "extern mem_dec\n"
-        "extern mem_left\n"
-        "extern mem_right\n"
-        "extern mem_get\n"
-        "extern mem_set\n"
-        "extern mem_printDebug\n\n"
+        "global main\n"
         "extern putchar\n\n");
-
     printf("section .text\n");
     printf("main:\n");
+    printf(
+        "    ; Salvestame esi väärtuse\n"
+        "    push esi\n\n"
+        "    ; Paneme magasini 30000 baiti, mille väärtused kõik on 0.\n"
+        "    mov ecx, 7500\n"
+        "    mem_init:\n"
+        "        push dword 0\n"
+        "        loop mem_init\n\n"
+        "    ; Viimasena lisatud väärtus on mäluala algus\n"
+        "    mov esi, esp\n\n\n"
+        "    ;;;;;;;;;;; Edasine on transleeritud kood!\n\n"
+    );
 
     /* Käime läbi kõik instruktsioonid ja käivitame neil
        funktsiooni printAsm. */
@@ -166,8 +168,15 @@ void printAsm(struct BF_instruction_st **inst_arr, int inst_arr_len) {
        }
     }
 
-    /* Funktsiooni main lõpp. */
-    printf("    mov eax, 0\n");
+    /* Transleeritud koodi lõpp. */
+    printf(
+        "    ; Koristame virtuaalmälu.\n"
+        "    add esp, 30000\n\n"
+        "    ; Taastame esi väärtuse.\n"
+        "    pop esi\n\n"
+        "    mov eax, 0\n\n"
+        "    ; Lõpetame programmi\n"
+        );
     printf("    ret\n");
 }
 void interpret2(char *program) {
