@@ -46,8 +46,6 @@ $(BUILD_DIR)/%.cpp.o: %.cpp
 clean:
 	@echo ""
 	@echo "-------------------Failide koristamine----------------------"
-	rm -f ./bfi
-	rm -f ./mem.c.o
 	rm -f ./hello.o
 	rm -f ./hello
 	rm -r $(BUILD_DIR)
