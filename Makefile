@@ -61,7 +61,9 @@ run:
 	cp ./build/src/mem.c.o ./
 	cp ./build/bfi ./
 	gcc -m32 hello.o mem.c.o -o hello -no-pie
+	clear
 	./hello
+	@echo ""
 
 
 # Include the .d makefiles. The - at the front suppresses the errors of missing

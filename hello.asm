@@ -1004,5 +1004,6 @@ silt_160:
 
     add esp, 4
 
+    mov eax, 0
     ret
 

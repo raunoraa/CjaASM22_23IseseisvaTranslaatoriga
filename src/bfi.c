@@ -167,6 +167,7 @@ void printAsm(struct BF_instruction_st **inst_arr, int inst_arr_len) {
     }
 
     /* Funktsiooni main lõpp. */
+    printf("    mov eax, 0\n");
     printf("    ret\n");
 }
 void interpret2(char *program) {
