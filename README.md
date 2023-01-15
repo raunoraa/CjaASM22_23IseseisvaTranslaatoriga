@@ -16,5 +16,3 @@ Uuesti kompileerimiseks võib lihtsalt kasutada taaskord käsku "make" (kirjutat
 <br>
 Uuesti "hello.asm" faili genereerimiseks, kompileerimiseks ja käivitamiseks võib lihtsalt kasutada taaskord käsku "make run" (ei pea vana "hello.asm" faili ära kustutama, see kirjutatakse lihtsalt üle).
 <br>
-<br>
-Hetkel ASM kompileerub hello.o failiks, kuid kui proovida sellest gcc-ga teha hello fail, siis tulevad errorid, et extern funktsioone ei tunta ära (nt undefined reference to mem_add jne).
