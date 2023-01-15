@@ -20,17 +20,17 @@ void BF_increment_printAsm(struct BF_instruction_st *instruction, int *index) {
     if(instruction->increment < 0) {
 
         printf("    ;;;; Instruktsioon -\n");
-        printf("    mov al, [esi + edi]\n");
+        printf("    mov al, [esi]\n");
         printf("    dec al\n");
-        printf("    mov [esi + edi], al\n\n");
+        printf("    mov [esi], al\n\n");
 
         }
     else {
 
         printf("    ;;;; Instruktsioon +\n");
-        printf("    mov al, [esi + edi]\n");
+        printf("    mov al, [esi]\n");
         printf("    inc al\n");
-        printf("    mov [esi + edi], al\n\n");
+        printf("    mov [esi], al\n\n");
 
     }
 
@@ -130,7 +130,7 @@ void BF_print_printAsm(struct BF_instruction_st *instruction, int *index) {
 
     //endine mem_get
     printf("    mov eax, 0\n\n");
-    printf("    mov al, [esi + edi]\n");
+    printf("    mov al, [esi]\n");
 
     printf("    push eax\n");
     printf("    call putchar\n\n");
@@ -223,7 +223,7 @@ void BF_beginLoop_printAsm(struct BF_instruction_st *instruction, int *index) {
     
     //endine mem_get
     printf("    mov eax, 0\n\n");
-    printf("    mov al, [esi + edi]\n");
+    printf("    mov al, [esi]\n");
 
     printf("    cmp eax, 0\n");
     printf("    je silt_%d\n", instruction->loopBackIndex);

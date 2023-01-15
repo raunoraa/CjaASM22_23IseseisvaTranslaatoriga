@@ -22,107 +22,107 @@ main:
     inc esi
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon [
 silt_9:
     mov eax, 0
 
-    mov al, [esi + edi]
+    mov al, [esi]
     cmp eax, 0
     je silt_22
     ;;;; Instruktsioon <
     dec esi
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon >
     inc esi
 
     ;;;; Instruktsioon -
-    mov al, [esi + edi]
+    mov al, [esi]
     dec al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon ]
     jmp silt_9
@@ -133,7 +133,7 @@ silt_22:
     ;;;; Instruktsioon .
     mov eax, 0
 
-    mov al, [esi + edi]
+    mov al, [esi]
     push eax
     call putchar
 
@@ -143,77 +143,77 @@ silt_22:
     inc esi
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon [
 silt_30:
     mov eax, 0
 
-    mov al, [esi + edi]
+    mov al, [esi]
     cmp eax, 0
     je silt_41
     ;;;; Instruktsioon <
     dec esi
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon >
     inc esi
 
     ;;;; Instruktsioon -
-    mov al, [esi + edi]
+    mov al, [esi]
     dec al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon ]
     jmp silt_30
@@ -222,58 +222,58 @@ silt_41:
     dec esi
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon .
     mov eax, 0
 
-    mov al, [esi + edi]
+    mov al, [esi]
     push eax
     call putchar
 
     add esp, 4
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon .
     mov eax, 0
 
-    mov al, [esi + edi]
+    mov al, [esi]
     push eax
     call putchar
 
@@ -282,31 +282,31 @@ silt_41:
     ;;;; Instruktsioon .
     mov eax, 0
 
-    mov al, [esi + edi]
+    mov al, [esi]
     push eax
     call putchar
 
     add esp, 4
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon .
     mov eax, 0
 
-    mov al, [esi + edi]
+    mov al, [esi]
     push eax
     call putchar
 
@@ -319,87 +319,87 @@ silt_41:
     inc esi
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon [
 silt_66:
     mov eax, 0
 
-    mov al, [esi + edi]
+    mov al, [esi]
     cmp eax, 0
     je silt_77
     ;;;; Instruktsioon <
     dec esi
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon >
     inc esi
 
     ;;;; Instruktsioon -
-    mov al, [esi + edi]
+    mov al, [esi]
     dec al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon ]
     jmp silt_66
@@ -408,88 +408,88 @@ silt_77:
     dec esi
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon .
     mov eax, 0
 
-    mov al, [esi + edi]
+    mov al, [esi]
     push eax
     call putchar
 
     add esp, 4
 
     ;;;; Instruktsioon -
-    mov al, [esi + edi]
+    mov al, [esi]
     dec al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon -
-    mov al, [esi + edi]
+    mov al, [esi]
     dec al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon -
-    mov al, [esi + edi]
+    mov al, [esi]
     dec al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon -
-    mov al, [esi + edi]
+    mov al, [esi]
     dec al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon -
-    mov al, [esi + edi]
+    mov al, [esi]
     dec al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon -
-    mov al, [esi + edi]
+    mov al, [esi]
     dec al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon -
-    mov al, [esi + edi]
+    mov al, [esi]
     dec al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon -
-    mov al, [esi + edi]
+    mov al, [esi]
     dec al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon -
-    mov al, [esi + edi]
+    mov al, [esi]
     dec al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon -
-    mov al, [esi + edi]
+    mov al, [esi]
     dec al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon -
-    mov al, [esi + edi]
+    mov al, [esi]
     dec al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon -
-    mov al, [esi + edi]
+    mov al, [esi]
     dec al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon .
     mov eax, 0
 
-    mov al, [esi + edi]
+    mov al, [esi]
     push eax
     call putchar
 
@@ -499,97 +499,97 @@ silt_77:
     inc esi
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon [
 silt_102:
     mov eax, 0
 
-    mov al, [esi + edi]
+    mov al, [esi]
     cmp eax, 0
     je silt_115
     ;;;; Instruktsioon <
     dec esi
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon >
     inc esi
 
     ;;;; Instruktsioon -
-    mov al, [esi + edi]
+    mov al, [esi]
     dec al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon ]
     jmp silt_102
@@ -598,14 +598,14 @@ silt_115:
     dec esi
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon .
     mov eax, 0
 
-    mov al, [esi + edi]
+    mov al, [esi]
     push eax
     call putchar
 
@@ -617,119 +617,119 @@ silt_115:
     ;;;; Instruktsioon .
     mov eax, 0
 
-    mov al, [esi + edi]
+    mov al, [esi]
     push eax
     call putchar
 
     add esp, 4
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon .
     mov eax, 0
 
-    mov al, [esi + edi]
+    mov al, [esi]
     push eax
     call putchar
 
     add esp, 4
 
     ;;;; Instruktsioon -
-    mov al, [esi + edi]
+    mov al, [esi]
     dec al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon -
-    mov al, [esi + edi]
+    mov al, [esi]
     dec al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon -
-    mov al, [esi + edi]
+    mov al, [esi]
     dec al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon -
-    mov al, [esi + edi]
+    mov al, [esi]
     dec al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon -
-    mov al, [esi + edi]
+    mov al, [esi]
     dec al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon -
-    mov al, [esi + edi]
+    mov al, [esi]
     dec al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon .
     mov eax, 0
 
-    mov al, [esi + edi]
+    mov al, [esi]
     push eax
     call putchar
 
     add esp, 4
 
     ;;;; Instruktsioon -
-    mov al, [esi + edi]
+    mov al, [esi]
     dec al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon -
-    mov al, [esi + edi]
+    mov al, [esi]
     dec al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon -
-    mov al, [esi + edi]
+    mov al, [esi]
     dec al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon -
-    mov al, [esi + edi]
+    mov al, [esi]
     dec al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon -
-    mov al, [esi + edi]
+    mov al, [esi]
     dec al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon -
-    mov al, [esi + edi]
+    mov al, [esi]
     dec al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon -
-    mov al, [esi + edi]
+    mov al, [esi]
     dec al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon -
-    mov al, [esi + edi]
+    mov al, [esi]
     dec al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon .
     mov eax, 0
 
-    mov al, [esi + edi]
+    mov al, [esi]
     push eax
     call putchar
 
@@ -745,82 +745,82 @@ silt_115:
     inc esi
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon [
 silt_148:
     mov eax, 0
 
-    mov al, [esi + edi]
+    mov al, [esi]
     cmp eax, 0
     je silt_160
     ;;;; Instruktsioon <
     dec esi
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon >
     inc esi
 
     ;;;; Instruktsioon -
-    mov al, [esi + edi]
+    mov al, [esi]
     dec al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon ]
     jmp silt_148
@@ -829,14 +829,14 @@ silt_160:
     dec esi
 
     ;;;; Instruktsioon +
-    mov al, [esi + edi]
+    mov al, [esi]
     inc al
-    mov [esi + edi], al
+    mov [esi], al
 
     ;;;; Instruktsioon .
     mov eax, 0
 
-    mov al, [esi + edi]
+    mov al, [esi]
     push eax
     call putchar
 
