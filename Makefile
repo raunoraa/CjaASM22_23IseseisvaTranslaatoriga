@@ -44,14 +44,19 @@ $(BUILD_DIR)/%.cpp.o: %.cpp
 
 .PHONY: clean
 clean:
+	@echo ""
+	@echo "-------------------Failide koristamine----------------------"
 	rm -f ./bfi
 	rm -f ./mem.c.o
 	rm -f ./hello.o
 	rm -f ./hello
 	rm -r $(BUILD_DIR)
+	@echo ""
 
 .PHONY: run
 run:
+	@echo ""
+	@echo "---Brainfucki transleerimine ja .asm faili kompileerimine---"
 	$(BUILD_DIR)/$(TARGET_EXEC) '>++++++++[<+++++++++>-]<.>++++[<+++++++>-]<+.+++++++..+++.>>++++++[<+++++++>-]<++.------------.>++++++[<+++++++++>-]<+.<.+++.------.--------.>>>++++[<++++++++>-]<+.' > hello.asm
 	rm -f ./bfi
 	rm -f ./mem.c.o
@@ -59,7 +64,11 @@ run:
 	rm -f ./hello
 	nasm hello.asm -felf
 	gcc -m32 hello.o -o hello -no-pie
+	@echo ""
+	@echo "-----------Transleeritud programmi käivitamine--------------"
 	./hello
+	@echo ""
+	@echo "----------------------Programmi lõpp------------------------"
 	@echo ""
 
 

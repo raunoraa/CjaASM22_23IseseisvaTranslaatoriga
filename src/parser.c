@@ -82,16 +82,18 @@ void BF_move_printAsm(struct BF_instruction_st *instruction, int *index) {
     if(instruction->numberOfPositions < 0) {
 
         printf("    ;;;; Instruktsioon <\n");
-        printf("    dec esi\n\n");
 
         //Mäluala alumise piiri kontroll
-        printf("    cmp esi, 0\n");
+        printf("    mov ecx, esp\n");
+        printf("    cmp esi, ecx\n");
         printf("    jb alla_nulli_%d\n\n", *index);
+
+        printf("    dec esi\n\n");
 
         printf("    jmp liigu_edasi_%d\n\n", *index);
 
         printf("alla_nulli_%d:\n", *index);
-        printf("    mov esi, 30000\n\n");
+        printf("    add esi, 29999\n\n");
 
         printf("liigu_edasi_%d:\n", *index);
 
@@ -99,16 +101,18 @@ void BF_move_printAsm(struct BF_instruction_st *instruction, int *index) {
     else {
 
         printf("    ;;;; Instruktsioon >\n");
-        printf("    inc esi\n\n");
 
         //Mäluala ülemise piiri kontroll
-        printf("    cmp esi, 30000\n");
+        printf("    mov ecx, esp\n");
+        printf("    cmp esi, ecx\n");
         printf("    ja yletaitumine_%d\n\n", *index);
+
+        printf("    inc esi\n\n");
 
         printf("    jmp liigu_edasi_%d\n\n", *index);
 
         printf("yletaitumine_%d:\n", *index);
-        printf("    mov esi, 0\n\n");
+        printf("    add esi, -29999\n\n");
 
         printf("liigu_edasi_%d:\n", *index);
 

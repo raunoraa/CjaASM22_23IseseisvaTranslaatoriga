@@ -19,15 +19,16 @@ main:
     ;;;;;;;;;;; Edasine on transleeritud kood!
 
     ;;;; Instruktsioon >
-    inc esi
-
-    cmp esi, 30000
+    mov ecx, esp
+    cmp esi, ecx
     ja yletaitumine_0
+
+    inc esi
 
     jmp liigu_edasi_0
 
 yletaitumine_0:
-    mov esi, 0
+    add esi, -29999
 
 liigu_edasi_0:
     ;;;; Instruktsioon +
@@ -79,15 +80,16 @@ silt_9:
     je silt_22
 
     ;;;; Instruktsioon <
-    dec esi
-
-    cmp esi, 0
+    mov ecx, esp
+    cmp esi, ecx
     jb alla_nulli_10
+
+    dec esi
 
     jmp liigu_edasi_10
 
 alla_nulli_10:
-    mov esi, 30000
+    add esi, 29999
 
 liigu_edasi_10:
     ;;;; Instruktsioon +
@@ -136,15 +138,16 @@ liigu_edasi_10:
     mov [esi], al
 
     ;;;; Instruktsioon >
-    inc esi
-
-    cmp esi, 30000
+    mov ecx, esp
+    cmp esi, ecx
     ja yletaitumine_20
+
+    inc esi
 
     jmp liigu_edasi_20
 
 yletaitumine_20:
-    mov esi, 0
+    add esi, -29999
 
 liigu_edasi_20:
     ;;;; Instruktsioon -
@@ -156,15 +159,16 @@ liigu_edasi_20:
     jmp silt_9
 silt_22:
     ;;;; Instruktsioon <
-    dec esi
-
-    cmp esi, 0
+    mov ecx, esp
+    cmp esi, ecx
     jb alla_nulli_23
+
+    dec esi
 
     jmp liigu_edasi_23
 
 alla_nulli_23:
-    mov esi, 30000
+    add esi, 29999
 
 liigu_edasi_23:
     ;;;; Instruktsioon .
@@ -177,15 +181,16 @@ liigu_edasi_23:
     add esp, 4
 
     ;;;; Instruktsioon >
-    inc esi
-
-    cmp esi, 30000
+    mov ecx, esp
+    cmp esi, ecx
     ja yletaitumine_25
+
+    inc esi
 
     jmp liigu_edasi_25
 
 yletaitumine_25:
-    mov esi, 0
+    add esi, -29999
 
 liigu_edasi_25:
     ;;;; Instruktsioon +
@@ -217,15 +222,16 @@ silt_30:
     je silt_41
 
     ;;;; Instruktsioon <
-    dec esi
-
-    cmp esi, 0
+    mov ecx, esp
+    cmp esi, ecx
     jb alla_nulli_31
+
+    dec esi
 
     jmp liigu_edasi_31
 
 alla_nulli_31:
-    mov esi, 30000
+    add esi, 29999
 
 liigu_edasi_31:
     ;;;; Instruktsioon +
@@ -264,15 +270,16 @@ liigu_edasi_31:
     mov [esi], al
 
     ;;;; Instruktsioon >
-    inc esi
-
-    cmp esi, 30000
+    mov ecx, esp
+    cmp esi, ecx
     ja yletaitumine_39
+
+    inc esi
 
     jmp liigu_edasi_39
 
 yletaitumine_39:
-    mov esi, 0
+    add esi, -29999
 
 liigu_edasi_39:
     ;;;; Instruktsioon -
@@ -284,15 +291,16 @@ liigu_edasi_39:
     jmp silt_30
 silt_41:
     ;;;; Instruktsioon <
-    dec esi
-
-    cmp esi, 0
+    mov ecx, esp
+    cmp esi, ecx
     jb alla_nulli_42
+
+    dec esi
 
     jmp liigu_edasi_42
 
 alla_nulli_42:
-    mov esi, 30000
+    add esi, 29999
 
 liigu_edasi_42:
     ;;;; Instruktsioon +
@@ -387,27 +395,29 @@ liigu_edasi_42:
     add esp, 4
 
     ;;;; Instruktsioon >
-    inc esi
-
-    cmp esi, 30000
+    mov ecx, esp
+    cmp esi, ecx
     ja yletaitumine_58
+
+    inc esi
 
     jmp liigu_edasi_58
 
 yletaitumine_58:
-    mov esi, 0
+    add esi, -29999
 
 liigu_edasi_58:
     ;;;; Instruktsioon >
-    inc esi
-
-    cmp esi, 30000
+    mov ecx, esp
+    cmp esi, ecx
     ja yletaitumine_59
+
+    inc esi
 
     jmp liigu_edasi_59
 
 yletaitumine_59:
-    mov esi, 0
+    add esi, -29999
 
 liigu_edasi_59:
     ;;;; Instruktsioon +
@@ -449,15 +459,16 @@ silt_66:
     je silt_77
 
     ;;;; Instruktsioon <
-    dec esi
-
-    cmp esi, 0
+    mov ecx, esp
+    cmp esi, ecx
     jb alla_nulli_67
+
+    dec esi
 
     jmp liigu_edasi_67
 
 alla_nulli_67:
-    mov esi, 30000
+    add esi, 29999
 
 liigu_edasi_67:
     ;;;; Instruktsioon +
@@ -496,15 +507,16 @@ liigu_edasi_67:
     mov [esi], al
 
     ;;;; Instruktsioon >
-    inc esi
-
-    cmp esi, 30000
+    mov ecx, esp
+    cmp esi, ecx
     ja yletaitumine_75
+
+    inc esi
 
     jmp liigu_edasi_75
 
 yletaitumine_75:
-    mov esi, 0
+    add esi, -29999
 
 liigu_edasi_75:
     ;;;; Instruktsioon -
@@ -516,15 +528,16 @@ liigu_edasi_75:
     jmp silt_66
 silt_77:
     ;;;; Instruktsioon <
-    dec esi
-
-    cmp esi, 0
+    mov ecx, esp
+    cmp esi, ecx
     jb alla_nulli_78
+
+    dec esi
 
     jmp liigu_edasi_78
 
 alla_nulli_78:
-    mov esi, 30000
+    add esi, 29999
 
 liigu_edasi_78:
     ;;;; Instruktsioon +
@@ -616,15 +629,16 @@ liigu_edasi_78:
     add esp, 4
 
     ;;;; Instruktsioon >
-    inc esi
-
-    cmp esi, 30000
+    mov ecx, esp
+    cmp esi, ecx
     ja yletaitumine_95
+
+    inc esi
 
     jmp liigu_edasi_95
 
 yletaitumine_95:
-    mov esi, 0
+    add esi, -29999
 
 liigu_edasi_95:
     ;;;; Instruktsioon +
@@ -666,15 +680,16 @@ silt_102:
     je silt_115
 
     ;;;; Instruktsioon <
-    dec esi
-
-    cmp esi, 0
+    mov ecx, esp
+    cmp esi, ecx
     jb alla_nulli_103
+
+    dec esi
 
     jmp liigu_edasi_103
 
 alla_nulli_103:
-    mov esi, 30000
+    add esi, 29999
 
 liigu_edasi_103:
     ;;;; Instruktsioon +
@@ -723,15 +738,16 @@ liigu_edasi_103:
     mov [esi], al
 
     ;;;; Instruktsioon >
-    inc esi
-
-    cmp esi, 30000
+    mov ecx, esp
+    cmp esi, ecx
     ja yletaitumine_113
+
+    inc esi
 
     jmp liigu_edasi_113
 
 yletaitumine_113:
-    mov esi, 0
+    add esi, -29999
 
 liigu_edasi_113:
     ;;;; Instruktsioon -
@@ -743,15 +759,16 @@ liigu_edasi_113:
     jmp silt_102
 silt_115:
     ;;;; Instruktsioon <
-    dec esi
-
-    cmp esi, 0
+    mov ecx, esp
+    cmp esi, ecx
     jb alla_nulli_116
+
+    dec esi
 
     jmp liigu_edasi_116
 
 alla_nulli_116:
-    mov esi, 30000
+    add esi, 29999
 
 liigu_edasi_116:
     ;;;; Instruktsioon +
@@ -769,15 +786,16 @@ liigu_edasi_116:
     add esp, 4
 
     ;;;; Instruktsioon <
-    dec esi
-
-    cmp esi, 0
+    mov ecx, esp
+    cmp esi, ecx
     jb alla_nulli_119
+
+    dec esi
 
     jmp liigu_edasi_119
 
 alla_nulli_119:
-    mov esi, 30000
+    add esi, 29999
 
 liigu_edasi_119:
     ;;;; Instruktsioon .
@@ -902,39 +920,42 @@ liigu_edasi_119:
     add esp, 4
 
     ;;;; Instruktsioon >
-    inc esi
-
-    cmp esi, 30000
+    mov ecx, esp
+    cmp esi, ecx
     ja yletaitumine_141
+
+    inc esi
 
     jmp liigu_edasi_141
 
 yletaitumine_141:
-    mov esi, 0
+    add esi, -29999
 
 liigu_edasi_141:
     ;;;; Instruktsioon >
-    inc esi
-
-    cmp esi, 30000
+    mov ecx, esp
+    cmp esi, ecx
     ja yletaitumine_142
+
+    inc esi
 
     jmp liigu_edasi_142
 
 yletaitumine_142:
-    mov esi, 0
+    add esi, -29999
 
 liigu_edasi_142:
     ;;;; Instruktsioon >
-    inc esi
-
-    cmp esi, 30000
+    mov ecx, esp
+    cmp esi, ecx
     ja yletaitumine_143
+
+    inc esi
 
     jmp liigu_edasi_143
 
 yletaitumine_143:
-    mov esi, 0
+    add esi, -29999
 
 liigu_edasi_143:
     ;;;; Instruktsioon +
@@ -966,15 +987,16 @@ silt_148:
     je silt_160
 
     ;;;; Instruktsioon <
-    dec esi
-
-    cmp esi, 0
+    mov ecx, esp
+    cmp esi, ecx
     jb alla_nulli_149
+
+    dec esi
 
     jmp liigu_edasi_149
 
 alla_nulli_149:
-    mov esi, 30000
+    add esi, 29999
 
 liigu_edasi_149:
     ;;;; Instruktsioon +
@@ -1018,15 +1040,16 @@ liigu_edasi_149:
     mov [esi], al
 
     ;;;; Instruktsioon >
-    inc esi
-
-    cmp esi, 30000
+    mov ecx, esp
+    cmp esi, ecx
     ja yletaitumine_158
+
+    inc esi
 
     jmp liigu_edasi_158
 
 yletaitumine_158:
-    mov esi, 0
+    add esi, -29999
 
 liigu_edasi_158:
     ;;;; Instruktsioon -
@@ -1038,15 +1061,16 @@ liigu_edasi_158:
     jmp silt_148
 silt_160:
     ;;;; Instruktsioon <
-    dec esi
-
-    cmp esi, 0
+    mov ecx, esp
+    cmp esi, ecx
     jb alla_nulli_161
+
+    dec esi
 
     jmp liigu_edasi_161
 
 alla_nulli_161:
-    mov esi, 30000
+    add esi, 29999
 
 liigu_edasi_161:
     ;;;; Instruktsioon +
