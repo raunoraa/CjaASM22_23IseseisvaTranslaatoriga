@@ -52,8 +52,6 @@ run:
 	rm -f ./hello.o
 	rm -f ./hello
 	nasm hello.asm -felf
-	gcc -m32 hello.o -o hello
-	./hello
 
 # Include the .d makefiles. The - at the front suppresses the errors of missing
 # Makefiles. Initially, all the .d files will be missing, and we don't want those
