@@ -194,10 +194,10 @@ struct BF_instruction_st *BF_debug_new(){
 
 void BF_beginLoop_printAsm(struct BF_instruction_st *instruction, int *index) {
     printf("    ;;;; Instruktsioon [\n");
-    printf("silt_%d:\n", instruction -> loopBackIndex);
+    printf("silt_%d:\n", *index);
     printf("    call mem_get\n");
     printf("    cmp eax, 0\n");
-    printf("    je silt_%d\n", *index);
+    printf("    je silt_%d\n", instruction->loopBackIndex);
 }
 /* Funktsiooni BF_beginLoop_run käivitatakse iga kord, kui jõutakse tsükli algusesse.
 */
@@ -220,10 +220,8 @@ void BF_beginLoop_run(struct BF_instruction_st *instruction, int *index) {
 
 /* Konstruktor funktsioon BF_beginLoop_new loob uue struktuuri, mis implementeerib
    tsüklite algust.
-
-   Probleem on vist hetkel siin, aga ma ei tea, kuidas seda parandada
 */
-struct BF_instruction_st *BF_beginLoop_new(int loopForwardIndex) {
+struct BF_instruction_st *BF_beginLoop_new(void) {
     struct BF_instruction_st *new = NULL;
 
     new = malloc(sizeof(struct BF_instruction_st));
@@ -232,7 +230,7 @@ struct BF_instruction_st *BF_beginLoop_new(int loopForwardIndex) {
         goto cleanup;
     }
 
-    new->loopForwardIndex = loopForwardIndex; //Tõenäoliselt mingi viga indeksitega, aga ei tea kuidas parandada.
+    new->loopForwardIndex = -1;
     new->run = BF_beginLoop_run;
     new->printAsm = BF_beginLoop_printAsm;
 
@@ -347,7 +345,7 @@ void parse(struct BF_instruction_st **inst_arr, const char *program) {
                 break;
             }
             case BF_START_LOOP:
-                inst_arr[i] = BF_beginLoop_new(i); //Probleem on hetkel seotud vist sellega, aga ma ei tea, kuidas seda parandada.
+                inst_arr[i] = BF_beginLoop_new();
                 stack_push(&loopStack, i);
                 break;
 

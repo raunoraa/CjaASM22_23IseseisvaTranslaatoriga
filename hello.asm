@@ -69,10 +69,10 @@ main:
     add esp, 4
 
     ;;;; Instruktsioon [
-silt_22:
+silt_9:
     call mem_get
     cmp eax, 0
-    je silt_9
+    je silt_22
     ;;;; Instruktsioon <
     push dword -1
     call mem_move
@@ -193,10 +193,10 @@ silt_22:
     add esp, 4
 
     ;;;; Instruktsioon [
-silt_41:
+silt_30:
     call mem_get
     cmp eax, 0
-    je silt_30
+    je silt_41
     ;;;; Instruktsioon <
     push dword -1
     call mem_move
@@ -413,10 +413,10 @@ silt_41:
     add esp, 4
 
     ;;;; Instruktsioon [
-silt_77:
+silt_66:
     call mem_get
     cmp eax, 0
-    je silt_66
+    je silt_77
     ;;;; Instruktsioon <
     push dword -1
     call mem_move
@@ -629,10 +629,10 @@ silt_77:
     add esp, 4
 
     ;;;; Instruktsioon [
-silt_115:
+silt_102:
     call mem_get
     cmp eax, 0
-    je silt_102
+    je silt_115
     ;;;; Instruktsioon <
     push dword -1
     call mem_move
@@ -911,10 +911,10 @@ silt_115:
     add esp, 4
 
     ;;;; Instruktsioon [
-silt_160:
+silt_148:
     call mem_get
     cmp eax, 0
-    je silt_148
+    je silt_160
     ;;;; Instruktsioon <
     push dword -1
     call mem_move
