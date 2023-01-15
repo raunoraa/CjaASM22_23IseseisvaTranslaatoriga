@@ -84,11 +84,33 @@ void BF_move_printAsm(struct BF_instruction_st *instruction, int *index) {
         printf("    ;;;; Instruktsioon <\n");
         printf("    dec esi\n\n");
 
+        //Mäluala alumise piiri kontroll
+        printf("    cmp esi, 0\n");
+        printf("    jb alla_nulli_%d\n\n", *index);
+
+        printf("    jmp liigu_edasi_%d\n\n", *index);
+
+        printf("alla_nulli_%d:\n", *index);
+        printf("    mov esi, 30000\n\n");
+
+        printf("liigu_edasi_%d:\n", *index);
+
         }
     else {
 
         printf("    ;;;; Instruktsioon >\n");
         printf("    inc esi\n\n");
+
+        //Mäluala ülemise piiri kontroll
+        printf("    cmp esi, 30000\n");
+        printf("    ja yletaitumine_%d\n\n", *index);
+
+        printf("    jmp liigu_edasi_%d\n\n", *index);
+
+        printf("yletaitumine_%d:\n", *index);
+        printf("    mov esi, 0\n\n");
+
+        printf("liigu_edasi_%d:\n", *index);
 
         }
 
@@ -226,7 +248,7 @@ void BF_beginLoop_printAsm(struct BF_instruction_st *instruction, int *index) {
     printf("    mov al, [esi]\n");
 
     printf("    cmp eax, 0\n");
-    printf("    je silt_%d\n", instruction->loopBackIndex);
+    printf("    je silt_%d\n\n", instruction->loopBackIndex);
 }
 /* Funktsiooni BF_beginLoop_run käivitatakse iga kord, kui jõutakse tsükli algusesse.
 */
