@@ -1,5 +1,7 @@
 # Brainfucki kompilaator
 <br>
+Kasutab gcc ja nasm kompilaatoreid.
+<br>
 C programmid (*.h ja *.c) paiknevad "src" kaustas.
 <br>
 
